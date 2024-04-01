@@ -2,14 +2,36 @@
     padding: 0;
     margin: 0;
     font-size: 14px;
+    
+    color: white;
 }
-
+i{
+    color: black;
+}
+body section{
+    background-color: black;
+}
 .logo-1{
     width: 10rem;
     height: 10rem;
 }
 
-.search-1{
+.nav-Login{
+    margin: 0;
+    padding: 0;
     display: flex;
-    flex-wrap: nowrap;
+    align-items: center;
+    background-position: center;
+    justify-content: space-around;
+    background-color: white;
+    color: black;
+}
+.nav-Login .options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-Login .options a{
+    margin-left: 2rem;
 }
