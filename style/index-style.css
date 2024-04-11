@@ -184,6 +184,10 @@ body{
     display: inline-block;
 }
 
+.menu .navbar ul li a:hover{
+  color: #ff9900;
+}
+
 #menu{
     display: none;
 }
@@ -249,7 +253,7 @@ th, td{
   background-repeat: no-repeat;
   background-position: center;
   text-align: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./img/audience-1853662_1920.webp");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/img-1.webp");
   transition: color 0.5s ease;
 }
 
