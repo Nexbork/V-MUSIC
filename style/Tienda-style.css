@@ -1,0 +1,514 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Fuente de google 
+
+.poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.poppins-extralight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.poppins-thin-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.poppins-extralight-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.poppins-light-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.poppins-regular-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.poppins-medium-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.poppins-semibold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.poppins-bold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.poppins-extrabold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.poppins-black-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+// <uniquifier>: Use a unique and descriptive class name
+
+.oswald-<uniquifier> {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+*/
+
+/* CONFIGURACIONES GENERALES */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+ img {
+    max-width: 100%;
+} 
+
+/* COMIENZO DEL MENU */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    min-height: 80vh;
+    background-color: #f5f5f5;
+    padding: 70px 0;
+}
+
+.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    font-size: 18px;
+    color: #111111;
+    text-transform: uppercase;
+    font-weight: 800;
+    
+}
+
+/* COMIENZO DEL NAVBAR */
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+
+    font-size: 18px;
+    padding: 20px;
+    color: black;
+    display: inline-block;
+}
+
+.menu .navbar ul li a:hover{
+  color: #ff9900;
+}
+
+#menu{
+    display: none;
+}
+
+.menu-icono{
+    width: 25px;
+
+}
+
+.menu label{
+    cursor: pointer;
+    display: none;
+}
+/* COMIENZO DEL SUBMENU */
+.submenu {
+  position: relative;
+}
+
+.submenu #carrito{
+  display: none;
+}
+
+.submenu:hover #carrito{
+  display: block;
+  position: absolute;
+  right: 0;
+  backdrop-filter: blur(10px);
+  top: 100%;
+  z-index: 1;
+  background-color: #4e4b5076;
+  padding: 20px;
+  min-width: 400px;
+}
+
+table{
+  width: 100%;
+}
+
+th, td{
+  color: #ffffff;
+}
+
+.borrar{
+  background-color: black;
+  border-radius: 50%;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+
+/* COMIENZO DEL HEADER CONTENT CON OFERTAS */
+
+.header-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffff;
+  flex: 1;
+  padding: 10% 5%;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/img-tienda.webp");
+  transition: color 0.5s ease;
+}
+
+.header-content:hover {
+  color: #8e9394;
+}
+
+.header-txt{
+  flex-basis: 50%;
+  text-align: center;
+}
+
+.header-txt h1{
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  line-height: 1;
+  font-family: "Oswald", sans-serif;
+  margin-bottom: 15px;
+}
+
+.header-txt p{
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.btn-1 {
+  display: inline-block;
+  padding: 11px 25px;
+  background-color: #ffff;
+  color: #111111;
+  border-radius: 5px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+.btn-1:hover {
+  background-color: #8e9394; 
+}
+
+.btn-2{
+  display: inline-block;
+  padding: 7px 10px;
+  background-color: #111111;
+  color: #ffffff;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+/* FIN DEL HEADER */
+
+
+
+.products{
+  padding: 50px 0;
+  text-align: center;
+}
+
+.products h2{
+  color: #111111;
+  font-family: 'Oswald', sans-serif;
+  font-size: 50px;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+
+.product-content{
+  display: grid;
+  grid-template-columns: repeat(3 , 1fr);
+  gap: 50px;
+}
+
+.product {
+   text-align: center;
+   border-radius: 5%;
+}
+
+
+.product .img-vermas{
+  background-size: contain; 
+   background-repeat: no-repeat; 
+   width: 23.125rem;
+   height: 18.75rem; 
+   display: flex; 
+   justify-content: center; 
+   align-items: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5%;
+  gap: 2rem;
+  margin-bottom: -2.75rem;
+}
+
+.product .img-vermas i{
+  display: none; 
+  cursor: pointer;
+}
+
+.product .img-vermas a{
+  display: none;
+  cursor: pointer;
+}
+
+.product .img-vermas i:hover{
+  display: block;
+  color: white;
+}
+
+.product .img-vermas a:hover{
+  display: block;
+  color: #111;
+  background-color: #fff;
+}
+
+.product p, .precio{
+  font-size: 16px;
+  color: #111111;
+  margin-bottom: 15px;
+}
+
+.precio{
+  font-weight: 800;
+}
+
+
+
+/* FOOTER */
+.footer{
+    padding: 50px 0;
+    background-color: #111111;
+  }
+  
+  .footer-content{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .link h3{
+    font-size: 18px;
+    color: #ffffff;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  
+  .link a{
+    font-size: 16px;
+    color: #DCDCDCDC;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  @media (max-width: 991px) {
+    .menu{
+      padding: 20px;
+    }
+  
+    .menu label{
+      display: initial;
+    }
+  
+    .menu .navbar{
+      position: absolute;
+      top:100%;
+      left: 0;
+      right: 0;
+      background-color: #111111;
+      display: none;
+    }
+  
+    .menu .navbar ul li {
+      width: 100%;
+    }
+  
+    .menu .navbar ul li a{
+      color: #ffffff;
+    }
+  
+    #menu:checked ~ .navbar{
+      display: initial;
+    }
+  
+    .logo{
+      display: none;
+    }
+  
+    .submenu:hover #carrito{
+      min-width: 100%;
+    }
+  
+    .header{
+      min-height: 0vh;
+    }
+  
+    .header-content{
+      padding: 50px 0;
+      flex-direction: column;
+    }
+  
+    .header-img{
+      display: none;
+    }
+  
+    .header-txt{
+      flex-basis: 100%;
+      text-align: center;
+    }
+  
+    .header-txt h1{
+      font-size: 70px;
+    }
+  
+    .ofert{
+      padding: 30px 30px 0 30px;
+      flex-direction: column;
+    }
+  
+    .ofert-1{
+      margin-bottom: 30px;
+    }
+  
+    .products{
+      padding: 0 30px 30px 30px;
+    }
+  
+    .products h2{
+      margin-bottom: 30px;
+    }
+  
+    .product-content{
+      grid-template-columns: repeat(1, 1fr);
+      gap: 30px;
+    }
+  
+    .product img{
+      width: 300px;
+      height: 200px;
+    }
+  
+    .blog{
+      padding: 0 30px 30px 30px;
+      flex-direction: column;
+    }
+  
+    .blog-1{
+      margin-bottom: 30px;
+    }
+  
+    .footer{
+      padding: 30px;
+    }
+  
+    .footer-content{
+      flex-direction: column;
+      text-align: center;
+    }
+  
+  }
